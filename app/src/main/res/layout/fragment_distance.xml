@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="16dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="Conversions de Distance"
+        android:textStyle="bold" android:textSize="18sp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+    <RadioGroup android:id="@+id/rgDist"
+        android:orientation="vertical"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <RadioButton android:id="@+id/rbKmToMiles" android:text="Kilomètres → Miles" android:checked="true"/>
+        <RadioButton android:id="@+id/rbMilesToKm" android:text="Miles → Kilomètres" />
+        <RadioButton android:id="@+id/rbKmToM" android:text="Kilomètres → Mètres" />
+        <RadioButton android:id="@+id/rbMtoKm" android:text="Mètres → Kilomètres" />
+    </RadioGroup>
+
+    <EditText android:id="@+id/etDistInput"
+        android:hint="Entrer la valeur"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button android:id="@+id/btnConvertDist"
+            android:text="Calculer"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/btnClearDist"
+            android:text="Effacer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+
+        <TextView android:id="@+id/tvDistResult"
+            android:text="Résultat : -" android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnCopyDist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copier"
+            style="@style/Widget.MaterialComponents.Button.TextButton" />
+    </LinearLayout>
+</LinearLayout>
